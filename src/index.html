@@ -1,29 +1,141 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-		<title>alilo</title>
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
-		<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/main.css">
-		<link rel="stylesheet" type="text/css" href="static/css/index.css"/>
-  </head>
-  <body>
+<!-- 头部 -->
+@@include('head.html',{
+"title":"alilo"
+})
+<div id="main">
+	<!-- 头部 -->
+	@@include('header.html')
+	<!-- 轮播 -->
+	<section>
+		<div class="banner">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<!-- <ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					</ol> -->
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<div class="carousel-caption">
+							<h3>BT Story Teller G6</h3>
+							<span>LEARN MORE</span>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
 
-    <div id="main">
-			<!-- 头部 -->
-      @@include('header.html')
-    </div>
-		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
+	<!-- 产品 -->
+	<section>
+		<div class="home-product" id="product">
+			<div class="home-product-left product-box" data-aos="zoom-in-left">
+				<div class="home-product-left-img">
+					<img src="static/images/home_photo_01.png" alt="">
+				</div>
+				<div class="home-product-left-text product-text">
+					<p>Zabawka Roku 2018!</p>
+					<p>Alilo Honey Bunny G6</p>
+					<p>Storyteller preloaded 60+ nursery rhyme, lullaby song, bedtime story ,<br />
+						safety chewable teether ears with 7 colorful lights ,buit-in<br />
+						rechargeable battery,no-angular design.</p>
+					<span>Learn more</span>
+				</div>
+			</div>
+			<div class="home-product-rigth">
+				<div class="home-product-rigth-top product-box" data-aos="zoom-in-up">
+					<div class="home-product-rigth-img">
+						<img src="static/images/home_photo_02.png" alt="">
+					</div>
+					<div class="home-product-rigth-text product-text">
+						<p></p>
+						<p>Amazing lullaby rattles R1</p>
+						<p>its exclusive patent design is winning global recognition, and <br />
+							it has been exported to Europe, America and Russia since it <br />
+							came on the market 4 years ago.</p>
+						<span>Learn more</span>
+					</div>
+				</div>
+				<div class="home-product-rigth-bottom product-box" data-aos="zoom-in-up">
+					<div class="home-product-rigth-img">
+						<img src="static/images/home_photo_03.png" alt="">
+					</div>
+					<div class="home-product-rigth-text product-text">
+						<p></p>
+						<p>Happy Bunny <br />
+							interactive music drum P1</p>
+						<p>Interaction to inspire musicality, belly drum, paw piano,<br />
+							lullaby melody, bed time stories,family game,<br />
+							learning color from luminous ears</p>
+						<span>Learn more</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 视频 -->
+	<section>
+		<div class="home-video">
+			<div class="home-video-conent col-xs-3" data-aos="zoom-out" id="homeVideo">
+				<div class="home-video-itme">
+					<div class="home-video-mode-img" data-id="1">
+						<div class="home-video-mode">
+							<img src="static/images/home_player_icon.png">
+						</div>
+						<img src="static/images/home_photo_02.png" alt="">
+					</div>
+					<span>Alilo Honey Bunny Edutainment For Children</span>
+				</div>
+				<div class="home-video-itme">
+					<div class="home-video-mode-img" data-id="2">
+						<div class="home-video-mode">
+							<img src="static/images/home_player_icon.png">
+						</div>
+						<img src="static/images/home_photo_02.png" alt="">
+					</div>
+					<span>Baby Rattles - Smarty Shake & Tell Play Doh</span>
+				</div>
+				<div class="home-video-itme">
+					<div class="home-video-mode-img" data-id="3">
+						<div class="home-video-mode">
+							<img src="static/images/home_player_icon.png">
+						</div>
+						<img src="static/images/home_photo_02.png" alt="">
+					</div>
+					<span>Baby Rattles - Smarty Shake & Tell Play Doh</span>
+				</div>
+			</div>
+		</div>
+		<div class="videoBox" style="display: none;">
+			<video id="my-video" class="video-js" controls preload="auto" width="740" height="400" poster="" data-setup="{}">
+				<source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+			</video>
+		</div>
+	</section>
+
+	<!-- 头部 -->
+	@@include('footer.html')
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/aos.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/video.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	AOS.init({
+		duration: 1200
+	});
+</script>
+</body>
 </html>
