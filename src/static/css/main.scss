@@ -82,6 +82,7 @@ label {
 		.navbar-nav {
 			margin: 0 auto;
 			.nav-item {
+				float: left;
 				padding: 0 40px;
 				a {
 					font-size: 24px;
@@ -111,6 +112,10 @@ label {
 		}
 		.nav-icon {
 			display: flex;
+			display: -moz-box;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
 			.nav-icon-item {
 				list-style: none;
 			}
@@ -293,6 +298,10 @@ button.btn.btn-primary.play {
 	width: 98%;
 	margin: 40px auto;
 	display: flex;
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	.home-product-left,
 	.home-product-rigth {
 		width: 50%;
@@ -416,6 +425,10 @@ button.btn.btn-primary.play {
 		width: 98%;
 		margin: 0 auto;
 		display: flex;
+		display: -moz-box;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
 		justify-content: space-around;
 		.home-video-itme {
 			width: 33.3%;
