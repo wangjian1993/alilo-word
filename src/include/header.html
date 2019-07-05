@@ -1,40 +1,65 @@
 <header>
-	<div class="header_top" id="home">
-		<nav class="navbar navbar-expand-md navbar-dark">
-			<a class="navbar-brand" href="#"><img src="../static/images/home_nav_logo.png" ></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-				<i class="iconfont icongengduo" style="color: #000;"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="collapsibleNavbar">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link " href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Products</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Brand</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-				</ul>
-				<ul class="nav-icon cal-xs">
-					<li class="nav-icon-item">
-						<a href=""><img src="../static/images/home_nav_youtube.png" ></a>
-					</li>
-					<li class="nav-icon-item">
-						<a href=""><img src="../static/images/home_nav_facebook.png" ></a>
-					</li>
-					<li class="nav-icon-item">
-						<a href=""><img src="../static/images/home_nav_email.png" ></a>
-					</li>
-					<li class="nav-icon-item">
-						<a href=""><img src="../static/images/home_nav_phone.png" ></a>
-					</li>
-				</ul>
+	<nav class="">
+		<div class="">
+			<div class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header page-scroll" style="position: relative; z-index:999">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand page-scroll" href="index.html"><img src="static/images/head_logo.png"></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center;">
+						<ul class="nav navbar-nav navbar-right"  style="display: inline-block;float: none;">
+							<li>
+								<a class="page-scroll" href="index.html" style="color: #d85e6e;">Home</a>
+							</li>
+							<li>
+								<a class="page-scroll" href="index.html" style="color: #ba5594;">Products</a>
+							</li>
+							<!-- <li>
+								<a class="page-scroll" href="index.html" style="color: #acd7f3;">Brand</a>
+							</li> -->
+							<li class="nav-item dropdown">
+								<a class="page-scroll" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #acd7f3;">
+									Brand
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: -10px;">
+									<p><img src="static/images/nav_arrow_03.png" ></p>
+									<a class="dropdown-item" href="brand.html?type=about" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">About Us</a>
+									<a class="dropdown-item" href="brand.html?type=milestone" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">Milestone</a>
+									<a class="dropdown-item" href="brand.html?type=honor" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">Our Honor</a>
+								</div>
+							</li>
+							<li>
+								<a class="page-scroll" href="contact.html" style="color: #b2cc41;">Contact</a>
+							</li>
+						</ul>
+						<!-- <ul class="nav navbar-nav navbar-right nav-tar" style="position: relative; z-index:999">
+							<li>
+								<a class="page-scroll" href="index.html"><img src="static/images/home_nav_email.png" ></a>
+							</li>
+							<li>
+								<a class="page-scroll" href="index.html"><img src="static/images/home_nav_email.png" ></a>
+							</li>
+							<li>
+								<a class="page-scroll" href="index.html"><img src="static/images/home_nav_email.png" ></a>
+							</li>
+							<li>
+								<a class="page-scroll" href="index.html"><img src="static/images/home_nav_email.png" ></a>
+							</li>
+						</ul> -->
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
 			</div>
-		</nav>
-	</div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
 </header>
