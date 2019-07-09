@@ -1,0 +1,97 @@
+<!-- 头部 -->
+@@include('head.html',{
+"title":"alilo"
+})
+<div id="main">
+	<!-- 头部 -->
+	@@include('header.html')
+	<!-- 内容 -->
+	<section>
+		<div class="content-details">
+			<!-- 图片 -->
+			<div class="details-img">
+				<div class="bg">
+					<div class="bg_left">
+						<div class="show">
+							<img src="static/images/G9_01.png" alt="">
+							<div class="mask"></div>
+						</div>
+						<div class="smallshow">
+							<div class="middle_box">
+								<ul class="middle">
+									<li><img src="static/images/G9_01.png" alt=""></li>
+									<li><img src="static/images/G9_02.png" alt=""></li>
+									<li><img src="static/images/G9_03.png" alt=""></li>
+									<li><img src="static/images/G9_04.png" alt=""></li>
+									<li><img src="static/images/G9_05.png" alt=""></li>
+									<li><img src="static/images/G9_06.png" alt=""></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bg_right">
+						<div class="bigshow">
+							<div class="bigitem">
+								<img src="static/images/G9_01.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="details-text">
+				<div class="details-text-box">
+					<h3>alilo baby bunny G9</h3>
+					<ul>
+						<li>
+							<p>Fasion macarons color</p>
+						</li>
+						<li>
+							<p>Matte feel</p>
+						</li>
+						<li>
+							<p>Recording</p>
+						</li>
+						<li>
+							<p>Bedtime story</p>
+						</li>
+						<li>
+							<p>Soothing sound</p>
+						</li>
+						<li>
+							<p>Preload 69 audios</p>
+						</li>
+						<li>
+							<p>hundreds more audio content to download</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="produc-img-list">
+			<p><img src="static/images/brand_headbg.png"></p>
+		</div>
+	</section>
+
+	<!-- 底部 -->
+	@@include('footer.html')
+</div>
+<script src="./static/lib/js/aos.js" type="text/javascript" charset="utf-8"></script>
+<script src="./static/lib/js/mag.js" type="text/javascript" charset="utf-8"></script>
+<script src="./static/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	 $(function(){
+        /*
+         show  //正常状态的框
+         bigshow   // 放大的框的盒子
+         smallshow  //缩小版的框
+         mask   //放大的区域（黑色遮罩）
+         bigitem  //放大的框
+         */
+        var obj = new mag('.show', '.bigshow','.smallshow','.mask','.bigitem');
+        obj.init();
+    });
+</script>
+</body>
+</html>

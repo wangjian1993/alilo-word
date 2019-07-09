@@ -1,0 +1,193 @@
+<!-- 头部 -->
+@@include('head.html',{
+"title":"alilo"
+})
+<div id="main">
+	<!-- 头部 -->
+	@@include('header.html')
+	<!-- 内容 -->
+	<!-- 轮播 -->
+	<section>
+		<div class="banner">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img class="img-responsive" src="static/images/bg.jpg" />
+						<div class="carousel-caption">
+							<h3>alilo smarty R1</h3>
+							<h1>Small body big ability</h1>
+							<span>LEARN MORE</span>
+						</div>
+					</div>
+				</div> <!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span> </a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+	<div class="content">
+		<section>
+			<div class="contact-tab">
+				<ul class="nav nav-tabs" id="navProduct">
+					<li data-toggle="tab" class="active" data-type="0"><a>Age</a></li>
+					<li data-toggle="tab" data-type="1"><a>Skills</a></li>
+				</ul>
+				<div id="age" class="product-tab">
+					<span data-type="2">0 - 2 years</span>
+					<span data-type="4">3 - 4 years</span>
+					<span data-type="6">4 - 6 years</span>
+				</div>
+				<div id="skills" class="product-tab" style="display: none;">
+					<span data-type="A">Shake & tell rattles</span>
+					<span data-type="B">Musical games</span>
+					<span data-type="C">Music & Storyteller</span>
+					<span data-type="D">STEM Programming</span>
+					<span data-type="E">Logical Thinking & Match</span>
+					<span data-type="F">Music & Storyteller</span>
+				</div>
+			</div>
+		</section>
+		<!-- 产品 -->
+		<section>
+			<div class="product-list">
+				<ul class="row" id="productList">
+					<!-- <li class="col-md-3">
+						<a href="products-details.html">
+							<img src="static/images/G9.png" alt="">
+							<p>alilo smarty R1</p>
+						</a>
+					</li> -->
+				</ul>
+			</div>
+		</section>
+	</div>
+	<!-- 底部 -->
+	@@include('footer.html')
+</div>
+<script src="./static/lib/js/aos.js" type="text/javascript" charset="utf-8"></script>
+<script src="./static/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var lsit = [{
+			"name": "alilo smarty R1",
+			"url": "static/images/R1.png",
+			"age": 2,
+			"skills": "A"
+		},
+		{
+			"name": "alilo yoyo R1+",
+			"url": "static/images/R1+.png",
+			"age": 2,
+			"skills": "B"
+		},
+		{
+			"name": "alilo honey bunny G6",
+			"url": "static/images/G6.png",
+			"age": 4,
+			"skills": "C"
+		},
+		{
+			"name": "alilo happy bunny P1",
+			"url": "static/images/P1.png",
+			"age": 4,
+			"skills": "B"
+		},
+		{
+			"name": "alilo STEM robot M7",
+			"url": "static/images/M7.png",
+			"age": 2,
+			"skills": "D"
+		},
+		{
+			"name": "alilo logic training board L2",
+			"url": "static/images/L2.png",
+			"age": 2,
+			"skills": "E"
+		},
+		{
+			"name": "alilo baby bunny G9",
+			"url": "static/images/G9.png",
+			"age": 4,
+			"skills": "C"
+		},
+		{
+			"name": "alilo spaceman J7",
+			"url": "static/images/J7.png",
+			"age": 6,
+			"skills": "C"
+		},
+		{
+			"name": "alilo building block M1",
+			"url": "static/images/M1.png",
+			"age": 6,
+			"skills": "F"
+		}
+	]
+	var urlType;
+	var urlLink;
+	urlType =GetQueryString("type");
+	urlLink =GetQueryString("link");
+	producList(lsit,urlType,urlLink);
+	//产品切换
+	$("#navProduct li").on("click", function() {
+		$(this).addClass("active").siblings().removeClass("active");
+		var id = $(this).data("type");
+		if (id == 0) {
+			$("#age").show();
+			$("#skills").hide();
+		} else {
+			$("#skills").show();
+			$("#age").hide();
+		}
+		producList(lsit);
+	})
+	$("#age").on("click", "span", function() {
+		var type = $(this).data("type");
+		$(this).addClass("productActive").siblings().removeClass("productActive");
+		producList(lsit,type,"age");
+	})
+	$("#skills").on("click", "span", function() {
+		var type = $(this).data("type");
+		$(this).addClass("productActive").siblings().removeClass("productActive");
+		producList(lsit,type,"skills");
+	})
+
+	function producList(data, type,product) {
+		var html = "";
+		data.forEach(function(item, index) {
+			if (type == undefined) {
+				html += '<li class="col-md-3"><a href="products-details.html">' +
+					'<img src="' + item.url + '" alt="">' +
+					'<p>' + item.name + '</p></a></li>';
+			} else {
+				if(product == "age"){
+					if(item.age == type){
+						html += '<li class="col-md-3"><a href="products-details.html">' +
+							'<img src="' + item.url + '" alt="">' +
+							'<p>' + item.name + '</p></a></li>';
+					}
+				}else if(product == "skills"){
+					if(item.skills == type){
+						html += '<li class="col-md-3"><a href="products-details.html">' +
+							'<img src="' + item.url + '" alt="">' +
+							'<p>' + item.name + '</p></a></li>';
+					}
+				}
+			}
+		});
+		$("#productList").html(html);
+	}
+
+	function GetQueryString(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return unescape(r[2]);
+		return null;
+	}
+</script>
+</body>
+</html>

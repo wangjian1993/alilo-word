@@ -16,25 +16,67 @@
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="text-align: center;">
-						<ul class="nav navbar-nav navbar-right"  style="display: inline-block;float: none;">
+						<ul class="nav navbar-nav navbar-right" style="display: inline-block;float: none;">
 							<li>
 								<a class="page-scroll" href="index.html" style="color: #d85e6e;">Home</a>
 							</li>
 							<li>
-								<a class="page-scroll" href="index.html" style="color: #ba5594;">Products</a>
+								<a class="page-scroll" href="javascript(0)" id="navProducts" role="button" data-toggle="dropdown" aria-haspopup="true"
+								 aria-expanded="false" style="color: #ba5594;">Products</a>
+								<div class="dropdown-menu" ria-labelledby="navProducts" style="width: 400px;right: inherit;margin-top: -10px;">
+									<div class="dropdown-products">				
+										<div class="age">
+											<p class="dropdown-icon"><img src="static/images/nav_arrow_02.png"></p>
+											<h3 style="margin: 30px 40px;">Age</h3>
+											<a class="dropdown-item" href="products.html?type=2&link=age" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0px 40px;">0
+												- 2 years
+											</a>
+											<a class="dropdown-item" href="products.html?type=4&link=age" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0 40px;">3
+												- 4 years
+											</a>
+											<a class="dropdown-item" href="products.html?type=6&link=age" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0 40px;">4
+												- 6 years
+											</a>
+										</div>
+										<div class="skills">
+											<p><img src=""></p>
+											<h3 style="margin: 30px 10px;">Skills</h3>
+											<a class="dropdown-item" href="products.html?type=A&link=skills" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0px 10px;">Shake
+												& tell rattles
+											</a>
+											<a class="dropdown-item" href="products.html?type=B&link=skills" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0px 10px;">Musical
+												games
+											</a>
+											<a class="dropdown-item" href="products.html?type=C&link=skills" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0px 10px;">Music
+												& Storyteller
+											</a>
+											<a class="dropdown-item" href="products.html?type=D&link=skills" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0px 10px;">STEM
+												Programming
+											</a>
+											<a class="dropdown-item" href="products.html?type=E&link=skills" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0px 10px;">Logical Thinking & Match
+											</a>
+											<a class="dropdown-item" href="products.html?type=F&link=skills" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: left;color: #292929;margin: 0px 10px;">Enlightenment
+												building
+											</a>
+										</div>
+									</div>
+								</div>
 							</li>
 							<!-- <li>
 								<a class="page-scroll" href="index.html" style="color: #acd7f3;">Brand</a>
 							</li> -->
 							<li class="nav-item dropdown">
-								<a class="page-scroll" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #acd7f3;">
+								<a class="page-scroll" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+								 aria-expanded="false" style="color: #acd7f3;">
 									Brand
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: -10px;">
-									<p><img src="static/images/nav_arrow_03.png" ></p>
-									<a class="dropdown-item" href="brand.html?type=about" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">About Us</a>
-									<a class="dropdown-item" href="brand.html?type=milestone" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">Milestone</a>
-									<a class="dropdown-item" href="brand.html?type=honor" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">Our Honor</a>
+									<p><img src="static/images/nav_arrow_03.png"></p>
+									<a class="dropdown-item" href="brand.html?type=0" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">About
+										Us</a>
+									<a class="dropdown-item" href="brand.html?type=1" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">Milestone</a>
+									<a class="dropdown-item" href="brand.html?type=2" style="font-size: 14px;margin: 0;height: 30px;line-height:30px;display: block;padding: 0;text-align: center;color: #292929;">Our
+										Honor</a>
 								</div>
 							</li>
 							<li>
