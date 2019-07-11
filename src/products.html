@@ -104,14 +104,14 @@
 			"model":"M7",
 			"name": "alilo STEM robot M7",
 			"url": "static/images/M7.png",
-			"age": 2,
+			"age": 6,
 			"skills": "D"
 		},
 		{
 			"model":"L2",
 			"name": "alilo logic training board L2",
 			"url": "static/images/L2.png",
-			"age": 2,
+			"age": 6,
 			"skills": "E"
 		},
 		{
@@ -148,9 +148,13 @@
 		if (id == 0) {
 			$("#age").show();
 			$("#skills").hide();
+			$("#age span").removeClass("productActive")
+			$("#skills span").removeClass("productActive")
 		} else {
 			$("#skills").show();
 			$("#age").hide();
+			$("#age span").removeClass("productActive")
+			$("#skills span").removeClass("productActive")
 		}
 		producList(lsit);
 	})
