@@ -8,8 +8,20 @@ $(function() {
 	]
 
 	/* ----- */
-
-
+	
+	/*首页导航*/
+	$("#navProducts,#producMenu").on("mouseenter", function() {
+		$("#producMenu").show();
+	})
+	$("#navProducts,#producMenu").on("mouseleave", function() {
+		$("#producMenu").hide();
+	})
+	$("#navbarDropdown,#barndMenu").on("mouseenter", function() {
+		$("#barndMenu").show();
+	})
+	$("#navbarDropdown,#barndMenu").on("mouseleave", function() {
+		$("#barndMenu").hide();
+	})
 
 	//产品图移入移除
 	$("#product").on("mouseenter", ".product-box", function() {

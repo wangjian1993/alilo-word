@@ -13,18 +13,13 @@
 				<div class="bg">
 					<div class="bg_left">
 						<div class="show">
-							<img src="static/images/G9_01.png" alt="">
+							<img id="productImg1" src="" alt="">
 							<div class="mask"></div>
 						</div>
 						<div class="smallshow">
 							<div class="middle_box">
-								<ul class="middle">
-									<li><img src="static/images/G9_01.png" alt=""></li>
-									<li><img src="static/images/G9_02.png" alt=""></li>
-									<li><img src="static/images/G9_03.png" alt=""></li>
-									<li><img src="static/images/G9_04.png" alt=""></li>
-									<li><img src="static/images/G9_05.png" alt=""></li>
-									<li><img src="static/images/G9_06.png" alt=""></li>
+								<ul class="middle" id="productImgList">
+									<!-- <li><img src="static/images/G9_01.png" alt=""></li> -->
 								</ul>
 							</div>
 						</div>
@@ -32,7 +27,7 @@
 					<div class="bg_right">
 						<div class="bigshow">
 							<div class="bigitem">
-								<img src="static/images/G9_01.png" alt="">
+								<img id="productImg2" src="" alt="">
 							</div>
 						</div>
 					</div>
@@ -40,29 +35,11 @@
 			</div>
 			<div class="details-text">
 				<div class="details-text-box">
-					<h3>alilo baby bunny G9</h3>
-					<ul>
-						<li>
+					<h3 id="detaileTelei"></h3>
+					<ul id="detaileList">
+						<!-- <li>
 							<p>Fasion macarons color</p>
-						</li>
-						<li>
-							<p>Matte feel</p>
-						</li>
-						<li>
-							<p>Recording</p>
-						</li>
-						<li>
-							<p>Bedtime story</p>
-						</li>
-						<li>
-							<p>Soothing sound</p>
-						</li>
-						<li>
-							<p>Preload 69 audios</p>
-						</li>
-						<li>
-							<p>hundreds more audio content to download</p>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -70,7 +47,7 @@
 	</section>
 	<section>
 		<div class="produc-img-list">
-			<p><img src="static/images/brand_headbg.png"></p>
+			<p><img id="detaileBanner" src=""></p>
 		</div>
 	</section>
 
@@ -81,17 +58,159 @@
 <script src="./static/lib/js/mag.js" type="text/javascript" charset="utf-8"></script>
 <script src="./static/js/main.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	 $(function(){
-        /*
-         show  //正常状态的框
-         bigshow   // 放大的框的盒子
-         smallshow  //缩小版的框
-         mask   //放大的区域（黑色遮罩）
-         bigitem  //放大的框
-         */
-        var obj = new mag('.show', '.bigshow','.smallshow','.mask','.bigitem');
-        obj.init();
-    });
+	$(function() {
+		var producList = {
+			"G9": {
+				"name": "G9",
+				"url": "static/images/product/G9/G9.jpg",
+				"count": 6,
+				"title": "alilo baby bunny G9",
+				"content": [
+					"Fasion macarons color",
+					"Matte feel",
+					"Recording",
+					"Soothing sound",
+					"Bedtime story",
+					"Preload 69 audios",
+					"hundreds more audio content to download"
+				]
+			},
+			"G6": {
+				"name": "G6",
+				"url": "static/images/product/G6/G6.jpg",
+				"count": 6,
+				"title": "alilo honey bunny G6",
+				"content": [
+					"usb download",
+					"recording voice",
+					"8GB TF card",
+					"colour earlight"
+				]
+			},
+			"J7": {
+				"name": "J7",
+				"url": "static/images/product/J7/J7.jpg",
+				"count": 4,
+				"title": "alilo baby bunny J7",
+				"content": [
+					"Fasion macarons color",
+					"Matte feel",
+					"Recording",
+					"Soothing sound",
+					"Bedtime story",
+					"Preload 69 audios",
+					"hundreds more audio content to download"
+				]
+			},
+			"L2": {
+				"name": "L2",
+				"url": "static/images/product/L2/L2.jpg",
+				"count": 4,
+				"title": "alilo logic training board L2",
+				"content": [
+					"Study Maths、logic Practice",
+					"Enhance learning ability"
+				]
+			},
+			"M1": {
+				"name": "M1",
+				"url": "static/images/product/M1/M1.jpg",
+				"count": 5,
+				"title": "alilo building block M1",
+				"content": [
+					"voice guide",
+					"look ,listen, read ,spell",
+					"learning 1000+words",
+					"Magnetic adsorption induction"
+				]
+			},
+			"M7": {
+				"name": "M7",
+				"url": "static/images/product/M7/M7.jpg",
+				"count": 4,
+				"title": "alilo STEM robot M7",
+				"content": [
+					"Android & iOS APP",
+					"5 Intelligent Mode",
+					"Scene Programming Game",
+					"Inquiry Thinking Training"
+				]
+			},
+			"P1": {
+				"name": "P1",
+				"url": "static/images/product/P1/P1.jpg",
+				"count": 5,
+				"title": "alilo happy bunny P1",
+				"content": [
+					"Soothing Sleep",
+					"Family Game",
+					"Color Perception",
+					"Music Enlightenment"
+				]
+			},
+			"R1": {
+				"name": "R1",
+				"url": "static/images/product/R1/R1.jpg",
+				"count": 4,
+				"title": "alilo smarty R1",
+				"content": [
+					"smart shake & tell rattles",
+					"preloaded 66 different natural sounds / nursery rhyme / lullaby song / bedtime story",
+					"learning 9 colors",
+					"safety chewable teether ears with 7 colorful lights",
+					"buit-in rechargeable battery",
+					"no-angular design"
+				]
+			},
+			"R1+": {
+				"name": "R1+",
+				"url": "static/images/product/R1+/R1+.jpg",
+				"count": 6,
+				"title": "alilo yoyo R1+",
+				"content": [
+					"bilingual mode CN & EN",
+					"shake and learning knowledge",
+					"teach and learning music rhythm",
+					"funny magic voice",
+					"game on interaction",
+					"preloaded 100+ music and sounds",
+					"buit-in rechargeable battery",
+					"no-angular design"
+				]
+			}
+		}
+
+		function GetQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]);
+			return null;
+		}
+
+		var model = GetQueryString("model");
+		for (var p in producList) {
+			if (model == p) {
+				$("#productImg1").attr("src", "static/images/product/" + model + "/" + model + "_01.jpg")
+				$("#productImg2").attr("src", "static/images/product/" + model + "/" + model + "_01.jpg")
+				$("#detaileTelei").html(producList[p].title);
+				$("#detaileBanner").attr("src", producList[p].url);
+				var textHtml="";
+				var imgHtml=""
+				producList[p].content.forEach(function(item,index){
+					textHtml += "<li><p>"+item+"</p></li>"
+				})
+				var imgCount =producList[p].count;
+				for(var i =0; i<imgCount;i++){
+					imgHtml += '<li><img src="static/images/product/' + model + '/' + model + '_0'+(i+1)+'.jpg" alt=""></li>'
+				}
+				$("#productImgList").html(imgHtml);
+				$("#detaileList").html(textHtml);
+			}
+		}
+		
+		var obj = new mag('.show', '.bigshow', '.smallshow', '.mask', '.bigitem');
+		obj.init();
+	});
 </script>
 </body>
 </html>

@@ -16,7 +16,7 @@
 						<div class="carousel-caption">
 							<h3>alilo smarty R1</h3>
 							<h1>Small body big ability</h1>
-							<span>LEARN MORE</span>
+							<span><a href="products-details.html?model=R1">LEARN MORE</a></span>
 						</div>
 					</div>
 				</div> <!-- Controls -->
@@ -73,54 +73,63 @@
 <script src="./static/js/main.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	var lsit = [{
+			"model":"R1",
 			"name": "alilo smarty R1",
 			"url": "static/images/R1.png",
 			"age": 2,
 			"skills": "A"
 		},
 		{
+			"model":"R1+",
 			"name": "alilo yoyo R1+",
 			"url": "static/images/R1+.png",
 			"age": 2,
 			"skills": "B"
 		},
 		{
+			"model":"G6",
 			"name": "alilo honey bunny G6",
 			"url": "static/images/G6.png",
 			"age": 4,
 			"skills": "C"
 		},
 		{
+			"model":"P1",
 			"name": "alilo happy bunny P1",
 			"url": "static/images/P1.png",
 			"age": 4,
 			"skills": "B"
 		},
 		{
+			"model":"M7",
 			"name": "alilo STEM robot M7",
 			"url": "static/images/M7.png",
 			"age": 2,
 			"skills": "D"
 		},
 		{
+			"model":"L2",
 			"name": "alilo logic training board L2",
 			"url": "static/images/L2.png",
 			"age": 2,
 			"skills": "E"
 		},
 		{
+			"model":"G9",
 			"name": "alilo baby bunny G9",
 			"url": "static/images/G9.png",
 			"age": 4,
 			"skills": "C"
 		},
+		// {
+		// 	"model":"J7",
+		// 	"name": "alilo spaceman J7",
+		// 	"url": "static/images/J7.png",
+		// 	"age": 6,
+		// 	"skills": "C"
+		// },
 		{
-			"name": "alilo spaceman J7",
-			"url": "static/images/J7.png",
-			"age": 6,
-			"skills": "C"
-		},
-		{
+			"model":"M1",
 			"name": "alilo building block M1",
 			"url": "static/images/M1.png",
 			"age": 6,
@@ -160,19 +169,19 @@
 		var html = "";
 		data.forEach(function(item, index) {
 			if (type == undefined) {
-				html += '<li class="col-md-3"><a href="products-details.html">' +
+				html += '<li class="col-md-3"><a href="products-details.html?model='+item.model+'">' +
 					'<img src="' + item.url + '" alt="">' +
 					'<p>' + item.name + '</p></a></li>';
 			} else {
 				if(product == "age"){
 					if(item.age == type){
-						html += '<li class="col-md-3"><a href="products-details.html">' +
+						html += '<li class="col-md-3"><a href="products-details.html?model='+item.model+'">' +
 							'<img src="' + item.url + '" alt="">' +
 							'<p>' + item.name + '</p></a></li>';
 					}
 				}else if(product == "skills"){
 					if(item.skills == type){
-						html += '<li class="col-md-3"><a href="products-details.html">' +
+						html += '<li class="col-md-3"><a href="products-details.html?model='+item.model+'">' +
 							'<img src="' + item.url + '" alt="">' +
 							'<p>' + item.name + '</p></a></li>';
 					}
