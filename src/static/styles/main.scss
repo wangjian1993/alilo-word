@@ -16,11 +16,11 @@ body a {
 	-ms-transition: 0.5s all;
 }
 a:link{text-decoration:none; cursor:pointer;}
- 
+
 a:visited{text-decoration:overline; cursor:pointer}
- 
+
 a:active{text-decoration:overline; cursor:pointer}
- 
+
 a:hover{text-decoration:overline; cursor:pointer}
 a:hover {
 	text-decoration: none;
@@ -478,7 +478,7 @@ label {
 	margin: 40px 0;
 	.contact-main-left,
 	.contact-main-rigth {
-		
+
 	}
 	.contact-main-left {
 		text-align: center;
@@ -708,7 +708,7 @@ label {
     .show{width: 560px;height:420px;margin-bottom: 10px;position: relative;border:1px solid #E8E8E8;cursor:move}
     .show img{width: 100%;height: 100%;}
     .mask{width: 215px;height: 215px;background: #000;filter: Alpha(opacity=50);opacity:0.5;position: absolute;top: 0;left: 0;display: none;}
-    .bigshow{width: 560px;height: 420px;overflow: hidden;margin-left: 10px;display: none;border:1px solid #E8E8E8;float: left;}
+    .bigshow{width: 560px;height: 100%;overflow: hidden;margin-left: 10px;display: none;border:1px solid #E8E8E8;float: left;}
     .bigshow img{width: 100%;height: 100%;margin-right: 10px;}
     .smallshow{width: 100%;height: 70px;position: relative}
     .smallshow img{width:100%;border:1px solid #e8e8e8;box-sizing: border-box;transition: all 0.5s}
