@@ -7,14 +7,14 @@
 	@@include('header.html')
 	<!-- 内容 -->
 	<section>
-		<div class="content-details">
+		<div class="content-details row">
 			<!-- 图片 -->
-			<div class="details-img">
+			<div class="details-img col-lg-6 col-md-8 col-sm-12">
 				<div class="bg">
 					<div class="bg_left">
 						<div class="show">
 							<img id="productImg1" src="" alt="">
-							<div class="mask"></div>
+							<!-- <div class="mask"></div> -->
 						</div>
 						<div class="smallshow">
 							<div class="middle_box">
@@ -24,23 +24,44 @@
 							</div>
 						</div>
 					</div>
-					<div class="bg_right">
+					<!-- <div class="bg_right">
 						<div class="bigshow">
 							<div class="bigitem">
 								<img id="productImg2" src="" alt="">
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
-			<div class="details-text">
+			<div class="details-text col-lg-6 col-md-4 col-sm-12">
 				<div class="details-text-box">
 					<h3 id="detaileTelei"></h3>
-					<ul id="detaileList">
+					<ul id="detaileList" class="details">
 						<!-- <li>
 							<p>Fasion macarons color</p>
 						</li> -->
 					</ul>
+          <div class="details-skills">
+            <p>Skills</p>
+            <ul class="row">
+              <li class="col-lg-5 col-md-12 col-sm-12">
+                <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
+              </li>
+              <li class="col-lg-5 col-md-12 col-sm-12">
+                <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
+              </li>
+              <li class="col-lg-5 col-md-12 col-sm-12">
+                <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
+              </li>
+              <li class="col-lg-5 col-md-12 col-sm-12">
+                <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
+              </li>
+            </ul>
+          </div>
+          <div class="details-age">
+            <p>Age</p>
+            <span>From 3 to 4 years</span>
+          </div>
 				</div>
 			</div>
 		</div>
@@ -63,7 +84,7 @@
 			"G9": {
 				"name": "G9",
 				"url": "static/images/product/G9/G9.jpg",
-				"count": 6,
+				"count": 5,
 				"title": "alilo baby bunny G9",
 				"content": [
 					"Fasion macarons color",
@@ -154,12 +175,12 @@
 				"count": 4,
 				"title": "alilo smarty R1",
 				"content": [
-					"smart shake & tell rattles",
-					"preloaded 66 different natural sounds / nursery rhyme / lullaby song / bedtime story",
-					"learning 9 colors",
-					"safety chewable teether ears with 7 colorful lights",
-					"buit-in rechargeable battery",
-					"no-angular design"
+					'Awards Winner - Brain Child "TillyWig Toy Awards"; The award winning Alilo Smarty Shake and Tell Rattle is sure to delight and become a new best friend. Just give Smarty a shake or press the soft silicone button to switch through a variety of rhymes, stories, songs and intriguing rattle sounds that includes bubbles popping, a saxophone, and a kitty meowing - all played from a Hi-Fi speaker with amazing sound. Help little ones relax with the classical music setting or a bedtime story. Smarty loves to name colors and its ears will light up with the color when it is saying the color name, just gently press the bottom of Smarty against one of the color cards provided. Comes with a USB cord for easy charging',
+					// "preloaded 66 different natural sounds / nursery rhyme / lullaby song / bedtime story",
+					// "learning 9 colors",
+					// "safety chewable teether ears with 7 colorful lights",
+					// "buit-in rechargeable battery",
+					// "no-angular design"
 				]
 			},
 			"R1+": {
@@ -168,14 +189,11 @@
 				"count": 6,
 				"title": "alilo yoyo R1+",
 				"content": [
-					"bilingual mode CN & EN",
-					"shake and learning knowledge",
-					"teach and learning music rhythm",
-					"funny magic voice",
-					"game on interaction",
-					"preloaded 100+ music and sounds",
-					"buit-in rechargeable battery",
-					"no-angular design"
+					"[Shake and learn] - provides early educational development to guide the baby to read and learn about the the fundamentals such as number counting, alphabets training, or do-re-mi music note in both forward and backward sequence by simply shaking the rattle.",
+					"[Sounds and Music] - Child brain absorbs knowledges like a sponge. There are built-in 40 different stimulating rattle sounds mimicking animals, objects, and different scenarios to ensure baby a plenty of options in brand development. 5 additional soothing nursery rhymes / lullaby songs to provide children a joyful good night sleep with peace of mind or even sing along with the music. The shake and tell can be the best friend when kids energy level and emotional estate is either at the highs or t",
+					"[Educational] - Learning doesn't stop here, the shake and tell learning bunny rattle will teach the baby about colors via illuminating ears as it reads out the color when it changes along rattle",
+					"[Game on] - 10 second shake down to see who gets the most count. It repeat back the voice recorded in 4 different voice changer effects: Rising Tone / Robot / Falling Tone / Echo to enhance the fun time and quality children playtime",
+					"[Children Product Safety Certified] - toddler grasp size rattle with durable shock resistant ABS plastic body and chew-safe silicone ears 100% made of CPC certified (Children Product Certified) CPSIA (consumer product safety improvement act) certified with BPA free Phthalates free Lead free materials"
 				]
 			}
 		}
@@ -207,7 +225,7 @@
 				$("#detaileList").html(textHtml);
 			}
 		}
-		
+
 		var obj = new mag('.show', '.bigshow', '.smallshow', '.mask', '.bigitem');
 		obj.init();
 	});

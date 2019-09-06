@@ -3,78 +3,136 @@
 "title":"alilo"
 })
 <div id="main">
-	<!-- 头部 -->
-	@@include('header.html')
-	<!-- 内容 -->
-	<div class="content">
-		<section>
-			<div class="contact-top">
-				<div class="contact-top-img">
-					<img src="static/images/contact_headbg.png" alt="">
-				</div>
-				<div class="contact-top-text">
-					<p>
-						Do you have any questions, comments, or stories <br />
-						to share about your alilo products? We'd love to<br />
-						hear from you. Please contact us via phone or<br />
-						e-mail at the contact information listed below.
-					</p>
-				</div>
-			</div>
-		</section>
-		<section>
-			<div class="contact-main row">
-				<div class="contact-main-left col-lg-6 col-md-6 col-sm-12">
-					<p>Fill out our Support Form to contact us regarding your Product.</p>
-					<div class="contact-main-input row">
-						<div class="input-group col-lg-5">
-							<input type="text" class="form-control" placeholder="Your name" aria-describedby="basic-addon1">
-						</div>
-						<div class="input-group col-lg-5">
-							<input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-						</div>
-						<div class="input-group col-lg-5">
-							<input type="text" class="form-control" placeholder="Theme" aria-describedby="basic-addon1">
-						</div>
-						<div class="input-group">
-							<textarea class="input-textarea">
-
-							</textarea>
-						</div>
-						<div class="input-btn">
-							<span>SEND</span>
-						</div>
-					</div>
-				</div>
-				<div class="contact-main-rigth col-lg-6 col-md-6 col-sm-12">
-					<div class="contact-main-rigth-box">
-						<div class="contact-main-rigth-info">
-							<h3>Contact information</h3>
-							<p class="info"><span>Email</span>info@alilo-world.com</p>
-							<p class="info"><span>Tel</span>+ 86 755-8669-9250</p>
-							<p class="info"><span>Fax</span>+ 86 755-2291-7933</p>
-						</div>
-						<div class="contact-main-rigth-info">
-							<h3>Address</h3>
-							<p>Room 907-911, Changhong Technology Building, <br />
-								Hi-Tech Industrial Park, Nanshan, Shenzhen, China</p>
-						</div>
-						<div class="contact-main-rigth-info">
-							<h3>Opening hours</h3>
-							<p>From Monday to Friday, 8:30am-24:00pm (SGT)</p>
-						</div>
-						<div class="contact-main-rigth-welcome">
-							<p>Welcome!</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-	<!-- 底部 -->
-	@@include('footer.html')
+  <!-- 头部 -->
+  @@include('header.html')
+  <!-- 内容 -->
+  <div class="content">
+    <section>
+      <div class="contact-top">
+        <div class="contact-top-img">
+          <img src="static/images/contact_headbg.png" alt="">
+        </div>
+        <div class="contact-top-text">
+          <p>
+            Do you have any questions, comments, or stories <br />
+            to share about your alilo products? We'd love to<br />
+            hear from you. Please contact us via phone or<br />
+            e-mail at the contact information listed below.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="contact-main row">
+        <div class="contact-main-left col-lg-6 col-md-6 col-sm-12">
+          <p class="contact-main-left-tetle">Fill out our Support Form to contact us regarding your Product.</p>
+          <div class="contact-main-input row">
+            <form action="" method="post">
+              <div class="input-group col-lg-5">
+                <input type="text" class="form-control" id="name" placeholder="Your name" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group col-lg-5">
+                <input type="text" class="form-control" id="email" placeholder="Email" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group col-lg-5">
+                <input type="text" class="form-control" id="theme" placeholder="Theme" aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group">
+                <textarea class="input-textarea" id="textares"></textarea>
+              </div>
+              <div class="input-btn">
+                <span id="submi">SEND</span>
+              </div>
+              <!-- <div class="form-group has-success has-feedback">
+                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true" style="display: no;"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+              </div>
+              <div class="form-group has-error has-feedback">
+                <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+              </div> -->
+            </form>
+          </div>
+        </div>
+        <div class="msgModal" id="myModal">
+          <div class="msgModal-content">
+            <div class="msgModal-text">Sent successfully </div>
+            <div class="msgModal-btn">
+              <p id="sentBtn">Send another</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-main-rigth col-lg-6 col-md-6 col-sm-12">
+          <div class="contact-main-rigth-box">
+            <div class="contact-main-rigth-info">
+              <h3>Contact information</h3>
+              <p class="info"><span>Email</span>info@alilo-world.com</p>
+              <p class="info"><span>Tel</span>+ 86 755-8669-9250</p>
+              <p class="info"><span>Fax</span>+ 86 755-2291-7933</p>
+            </div>
+            <div class="contact-main-rigth-info">
+              <h3>Address</h3>
+              <p class="info">Room 907-911, Changhong Technology Building, <br />
+                Hi-Tech Industrial Park, Nanshan, Shenzhen, China</p>
+            </div>
+            <div class="contact-main-rigth-info">
+              <h3>Opening hours</h3>
+              <p class="info">From Monday to Friday, 8:30am-18:00pm (SGT)</p>
+            </div>
+            <!-- <div class="contact-main-rigth-welcome">
+              <p  class="info">Welcome!</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- 底部 -->
+  @@include('footer.html')
 </div>
 <script src="./static/lib/js/aos.js" type="text/javascript" charset="utf-8"></script>
 <script src="./static/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var flag = true;
+  var btnFlag = false;
+  $("#submi").on("click", function() {
+    if (!flag) {
+      location.href = "index.html";
+    } else {
+      console.log(btnFlag)
+      if (btnFlag){
+         $('#myModal').modal('show');
+      }
+    }
+  })
+  $("#sentBtn").on("click", function() {
+    $('#myModal').modal('hide');
+    $("#name").val("");
+    $("#email").val("");
+    $("#theme").val("");
+    $("#textares").val("");
+    flag = false;
+  })
+  $("input,textarea").on("input propertychange change", function(event) {
+    var name = $("#name").val().trim().length;
+    var email = $("#email").val().trim().length;
+    var theme = $("#theme").val().trim().length;
+    var textares = $("#textares").val();
+    if (name > 0 && email > 0 && theme > 0 && textares != "") {
+      $("#submi").css({
+        'background': '#67b8e9',
+        "cursor": "pointer",
+        "pointer-events": "initial"
+      });
+      btnFlag = true;
+    } else {
+      $("#submi").css({
+        'background': '#a1a2a7'
+      });
+      btnFlag = false;
+    }
+  });
+</script>
 </body>
 </html>
