@@ -43,24 +43,15 @@
 					</ul>
           <div class="details-skills">
             <p>Skills</p>
-            <ul class="row">
-              <li class="col-lg-5 col-md-12 col-sm-12">
+            <ul class="row" id="slillsList">
+             <!-- <li class="col-lg-5 col-md-12 col-sm-12">
                 <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
-              </li>
-              <li class="col-lg-5 col-md-12 col-sm-12">
-                <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
-              </li>
-              <li class="col-lg-5 col-md-12 col-sm-12">
-                <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
-              </li>
-              <li class="col-lg-5 col-md-12 col-sm-12">
-                <img src="static/images/product/G6/icon/04.png" alt=""><span>simple operation</span>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="details-age">
             <p>Age</p>
-            <span>From 3 to 4 years</span>
+            <span id="ageList"></span>
           </div>
 				</div>
 			</div>
@@ -83,34 +74,45 @@
 		var producList = {
 			"G9": {
 				"name": "G9",
-				"url": "static/images/product/G9/G9.jpg",
-				"count": 5,
+				"url": "static/images/product/G9/G9.png",
+				"count": 4,
 				"title": "alilo baby bunny G9",
-				"content": [
-					"Fasion macarons color",
-					"Matte feel",
-					"Recording",
-					"Soothing sound",
-					"Bedtime story",
-					"Preload 69 audios",
-					"hundreds more audio content to download"
-				]
+        "content": [
+          "Fasion macarons color, Matte feel",
+          "Bedtime story, Preload 69 audios",
+          "Recording",
+          "Soothing sound",
+        ],
+        "slills":[
+          "simple operation",
+          "good sound quality",
+          "security & drop resistance",
+          "colour earlight"
+        ],
+        "age":"From 3 to 4 years"
 			},
 			"G6": {
 				"name": "G6",
-				"url": "static/images/product/G6/G6.jpg",
-				"count": 6,
+				"url": "static/images/product/G6/G6.png",
+				"count": 4,
 				"title": "alilo honey bunny G6",
 				"content": [
 					"usb download",
 					"recording voice",
 					"8GB TF card",
 					"colour earlight"
-				]
+				],
+        "slills":[
+          "simple operation",
+          "good sound quality",
+          "security & drop resistance",
+          "colour earlight"
+        ],
+        "age":"From 3 to 4 years"
 			},
 			"J7": {
 				"name": "J7",
-				"url": "static/images/product/J7/J7.jpg",
+				"url": "static/images/product/J7/J7.png",
 				"count": 4,
 				"title": "alilo baby bunny J7",
 				"content": [
@@ -121,80 +123,127 @@
 					"Bedtime story",
 					"Preload 69 audios",
 					"hundreds more audio content to download"
-				]
+				],
+        "slills":[
+          "simple operation",
+          "good sound quality",
+          "security & drop resistance",
+          "colour earlight"
+        ],
+        "age":"From 3 to 4 years"
 			},
 			"L2": {
 				"name": "L2",
-				"url": "static/images/product/L2/L2.jpg",
-				"count": 4,
+				"url": "static/images/product/L2/L2.png",
+				"count": 3,
 				"title": "alilo logic training board L2",
 				"content": [
 					"Study Maths、logic Practice",
 					"Enhance learning ability"
-				]
+				],
+        "slills":[
+          "protect eyesight",
+          "self-regulated learning",
+          "button operation",
+          "funny and studious",
+          "timely feedback",
+          "from easy to difficult"
+        ],
+        "age":"From 4 to 6 years"
 			},
 			"M1": {
 				"name": "M1",
-				"url": "static/images/product/M1/M1.jpg",
-				"count": 5,
+				"url": "static/images/product/M1/M1.png",
+				"count": 3,
 				"title": "alilo building block M1",
 				"content": [
 					"voice guide",
 					"look ,listen, read ,spell",
 					"learning 1000+words",
 					"Magnetic adsorption induction"
-				]
+				],
+        "slills":[
+          "magnetic blocks",
+          "simple operation",
+          "large number of thesaurus"
+        ],
+        "age":"From 4 to 6 years"
 			},
 			"M7": {
 				"name": "M7",
-				"url": "static/images/product/M7/M7.jpg",
+				"url": "static/images/product/M7/M7.png",
 				"count": 4,
 				"title": "alilo STEM robot M7",
 				"content": [
-					"Android & iOS APP",
-					"5 Intelligent Mode",
-					"Scene Programming Game",
+					"The alilo “Explorer” APP is now  available on Android and iOS market",
+					"Come with a set of command card. Design the route and realize cute ideas by putting the cards.",
+					"Remote Control / Voice Control /  Path / Blockly.",
 					"Inquiry Thinking Training"
-				]
+				],
+        "slills":[
+          "android & iOS app",
+          "5 intelligent mode",
+          "scene programming game",
+          "inquiry thinking training"
+        ],
+        "age":"From 4 to 6 years"
 			},
 			"P1": {
 				"name": "P1",
-				"url": "static/images/product/P1/P1.jpg",
-				"count": 5,
+				"url": "static/images/product/P1/P1.png",
+				"count": 3,
 				"title": "alilo happy bunny P1",
 				"content": [
-					"Soothing Sleep",
-					"Family Game",
-					"Color Perception",
-					"Music Enlightenment"
-				]
+					"Drum beating and singing",
+					"Sleeping function",
+					"Pure tone quality",
+					"Safety Material"
+				],
+        "slills":[
+         "soothing sleep",
+         "color perception",
+         "music enlightenment",
+         "family game"
+        ],
+        "age":"From 3 to 4 years"
 			},
 			"R1": {
 				"name": "R1",
-				"url": "static/images/product/R1/R1.jpg",
+				"url": "static/images/product/R1/R1.png",
 				"count": 4,
 				"title": "alilo smarty R1",
 				"content": [
-					'Awards Winner - Brain Child "TillyWig Toy Awards"; The award winning Alilo Smarty Shake and Tell Rattle is sure to delight and become a new best friend. Just give Smarty a shake or press the soft silicone button to switch through a variety of rhymes, stories, songs and intriguing rattle sounds that includes bubbles popping, a saxophone, and a kitty meowing - all played from a Hi-Fi speaker with amazing sound. Help little ones relax with the classical music setting or a bedtime story. Smarty loves to name colors and its ears will light up with the color when it is saying the color name, just gently press the bottom of Smarty against one of the color cards provided. Comes with a USB cord for easy charging',
-					// "preloaded 66 different natural sounds / nursery rhyme / lullaby song / bedtime story",
-					// "learning 9 colors",
-					// "safety chewable teether ears with 7 colorful lights",
-					// "buit-in rechargeable battery",
-					// "no-angular design"
-				]
+					"Smart shake&tell rattles",
+					"Preloaded 66 different nature Sounds / Nursery Rhyme / Lullaby Song / Bedtime Story",
+					"Safety Chewable Teether ears with 7 colorful lights",
+					"Buit-in rechargeable battery"
+				],
+        "slills":[
+          "no-angular design",
+          "good sound quality",
+          "buit-in rechargeable battery",
+          "leaning 9 colors"
+        ],
+        "age":"From 0 to 2 years"
 			},
 			"R1+": {
 				"name": "R1+",
-				"url": "static/images/product/R1+/R1+.jpg",
-				"count": 6,
+				"url": "static/images/product/R1+/R1+.png",
+				"count": 5,
 				"title": "alilo yoyo R1+",
 				"content": [
-					"[Shake and learn] - provides early educational development to guide the baby to read and learn about the the fundamentals such as number counting, alphabets training, or do-re-mi music note in both forward and backward sequence by simply shaking the rattle.",
-					"[Sounds and Music] - Child brain absorbs knowledges like a sponge. There are built-in 40 different stimulating rattle sounds mimicking animals, objects, and different scenarios to ensure baby a plenty of options in brand development. 5 additional soothing nursery rhymes / lullaby songs to provide children a joyful good night sleep with peace of mind or even sing along with the music. The shake and tell can be the best friend when kids energy level and emotional estate is either at the highs or t",
-					"[Educational] - Learning doesn't stop here, the shake and tell learning bunny rattle will teach the baby about colors via illuminating ears as it reads out the color when it changes along rattle",
-					"[Game on] - 10 second shake down to see who gets the most count. It repeat back the voice recorded in 4 different voice changer effects: Rising Tone / Robot / Falling Tone / Echo to enhance the fun time and quality children playtime",
-					"[Children Product Safety Certified] - toddler grasp size rattle with durable shock resistant ABS plastic body and chew-safe silicone ears 100% made of CPC certified (Children Product Certified) CPSIA (consumer product safety improvement act) certified with BPA free Phthalates free Lead free materials"
-				]
+					"Bilingual mode CN&EN",
+					"Shake and learning knowlage",
+					"Teach and learning music rhythm",
+					"Funny magic voice,preloaded 100+ music and sounds"
+				],
+        "slills":[
+          "no-angular design",
+          "good sound quality",
+          "buit-in rechargeable battery",
+          "game on interaction"
+        ],
+        "age":"From 0 to 2 years"
 			}
 		}
 
@@ -213,16 +262,23 @@
 				$("#detaileTelei").html(producList[p].title);
 				$("#detaileBanner").attr("src", producList[p].url);
 				var textHtml="";
-				var imgHtml=""
+				var imgHtml="";
+        var skillsHtml="";
 				producList[p].content.forEach(function(item,index){
 					textHtml += "<li><p>"+item+"</p></li>"
 				})
+        producList[p].slills.forEach(function(item,index){
+        	skillsHtml += '<li class="col-lg-6 col-md-12 col-sm-12">'+
+               '<img src="static/images/product/' + model + '/icon/0'+(index+1)+'.png" alt=""><span>'+item+'</span></li>'
+        })
 				var imgCount =producList[p].count;
 				for(var i =0; i<imgCount;i++){
 					imgHtml += '<li><img src="static/images/product/' + model + '/' + model + '_0'+(i+1)+'.jpg" alt=""></li>'
 				}
 				$("#productImgList").html(imgHtml);
 				$("#detaileList").html(textHtml);
+        $("#slillsList").html(skillsHtml);
+        $("#ageList").html(producList[p].age)
 			}
 		}
 
